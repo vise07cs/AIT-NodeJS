@@ -20,6 +20,7 @@ console.log("hello")
 //   })
 // }
 
+// same code using async/await
 
 async function getData() {
   try {
