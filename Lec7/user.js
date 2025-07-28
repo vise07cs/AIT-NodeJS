@@ -7,6 +7,7 @@ function getUsers(){
 
     data.then(function(success){
       console.log(success)
+      
       console.log(success[0].name)
       console.log(success.length)
 
