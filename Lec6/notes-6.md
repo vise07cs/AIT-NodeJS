@@ -49,3 +49,5 @@ we can use ES6 module patterns without modifying package.json file also
 
 ======> change the extension of the files from .js to .mjs  ------------> this way is never used
 in the import statement also change to .mjs -----> import m from "./fileA.mjs"
+
+
