@@ -3,7 +3,7 @@ Lec 2
 --------
  Lets brush up some JS concepts
  1) Function in JS ----------------------------->  (fn1.js)
- -----> set of instruction or statements in the bloak (functional block ) and it is used to perform particular task or action
+ -----> set of instruction or statements in the block (functional block ) and it is used to perform particular task or action
  -----> main use of functions is reusablity
 
 

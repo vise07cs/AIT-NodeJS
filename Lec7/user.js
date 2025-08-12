@@ -6,10 +6,11 @@ function getUsers(){
     let data =res.json()
 
     data.then(function(success){
+
       console.log(success)
       
-      console.log(success[0].name)
-      console.log(success.length)
+      // console.log(success[0].name)
+      // console.log(success.length)
 
       document.createElement('ol')
       for(let i=0;i<success.length;i++){

@@ -29,6 +29,7 @@ let promiseObj =new Promise(function (resolve,reject){
 })
 
 
+
 resolve and reject are 2 pre defined functions in JS . 
 These are used to add data to promise object 
 

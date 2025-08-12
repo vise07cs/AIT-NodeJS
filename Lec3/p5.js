@@ -8,4 +8,4 @@ function abc(){
 
 }
 
-abc()()
+abc()
