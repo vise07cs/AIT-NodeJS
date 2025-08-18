@@ -457,3 +457,121 @@ output:
 Start
 End
 Inside setTimeout
+
+
+
+JS is single-threaded but uses the Event Loop.
+setTimeout puts the callback in the Callback Queue, and it runs only when the call stack is empty.
+
+
+
+for (var i = 1; i <= 3; i++) {
+    setTimeout(() => console.log(i), 1000);
+}
+// Output after 1s: 4, 4, 4  (not 1, 2, 3)
+
+var is function-scoped, so all timeouts share the same i (which is 4 after the loop).
+
+
+
+for (let i = 1; i <= 3; i++) {
+    setTimeout(() => console.log(i), 1000);
+}
+// Output: 1, 2, 3
+
+
+# Block Scope
+
+Block scope means a variable is only accessible inside the {} block where it is defined.
+
+let and const are block-scoped.
+
+var is function-scoped, not block-scoped.
+
+{
+    let x = 10;
+    const y = 20;
+    var z = 30;
+}
+
+console.log(typeof x); // "undefined" (Error if directly accessed)
+console.log(typeof y); // "undefined" (Error if directly accessed)
+console.log(z);        // 30 ✅ (var is NOT block scoped)
+
+
+
+#  Shadowing
+
+let a = 100;
+
+{
+    let a = 50;  // Shadows outer 'a'
+    console.log(a); // 50
+}
+
+console.log(a); // 100
+
+If you shadow a variable declared with let or const using var in the same scope, it’s illegal.
+
+let b = 10;
+
+{
+    var b = 20; // ❌ SyntaxError: Identifier 'b' has already been declared
+}
+
+
+
+You can shadow let with another let, or var with another var, in different scopes.
+
+var c = 10;
+
+{
+    let c = 20; // ✅ Legal (different scope)
+    console.log(c); // 20
+}
+
+console.log(c); // 10
+
+
+
+
+# Call apply and bind
+
+They all let you explicitly set the value of this when calling a function.
+
+call()
+
+Calls the function immediately.
+
+Pass arguments individually (comma-separated).
+
+function greet(city, country) {
+    console.log(`Hello, my name is ${this.name} and I live in ${city}, ${country}.`);
+}
+
+const person = { name: "Vikram" };
+
+greet.call(person, "Delhi", "India");
+
+// Output: Hello, my name is Vikram and I live in Delhi, India.
+
+
+. apply()
+Same as call(), but arguments are passed as an array.
+
+Useful when you already have arguments in an array.
+
+greet.apply(person, ["Delhi", "India"]);
+
+// Output: Hello, my name is Vikram and I live in Delhi, India.
+
+ bind()
+
+Returns a new function with this permanently set.
+
+Does not call immediately — you must invoke the returned function yourself.
+
+const boundGreet = greet.bind(person, "Delhi", "India");
+boundGreet();
+// Output: Hello, my name is Vikram and I live in Delhi, India.
+

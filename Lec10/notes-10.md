@@ -37,7 +37,7 @@ db.collectoinName.insertOne({name:"Raj Sinha",city:"Delhi"})
  to delete a collection 
 
 
- db.collection-name.drop
+ db.<collection-name>.drop()
 
 
 
@@ -76,3 +76,4 @@ db.myusercollection1.insertMany([{name:"Vikram" , city:"Patna" }, {name:"manish"
 
 We can add nested documents also
 db.myusercollection1.insertOne{name:"john",address:{city:"ny",country:"USA"}}
+

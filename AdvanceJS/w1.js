@@ -15,7 +15,7 @@ function outer(){
   
   function inner(){
      console.log("Inner1 function");
-    var secret=123;
+    let secret=123;
     console.log(username);
    
   }
@@ -23,10 +23,10 @@ function outer(){
   function inner2(){
     console.log("Inner2 function");
     console.log(username);
-    console.log(secret);
+    // console.log(secret); ----> error: secret is not defined
   }
 
-
+  
   inner();
   inner2();
   console.log("Outer function");

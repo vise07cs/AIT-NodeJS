@@ -1,4 +1,4 @@
-//code 1
+//code 1  Exevution Context
 
 // let n=2;
 // function sqr(num){
@@ -10,23 +10,26 @@
 // console.log(sqr(5));
 
 
-console.log(x);    // undefined
-// console.log(y); // ReferenceError
-// console.log(z); // ReferenceError
 
-var x = 5;
-let y = 6;
-const z = 7;
 
-greet(); // "Hi from function declaration!"
+// Code2  Hoisting
 
-function greet() {
-  console.log("Hi from function declaration!");
-}
+// console.log(x);    // undefined
+// // console.log(y); // ReferenceError
+// // console.log(z); // ReferenceError
 
-// sayBye(); // ❌ TypeError
-var sayBye = function() {
-  console.log("Bye from function expression!");
-};
+// var x = 5;
+// let y = 6;
+// const z = 7;
 
+// greet(); // "Hi from function declaration!"
+
+// function greet() {
+//   console.log("Hi from function declaration!");
+// }
+
+// // sayBye(); // ❌ TypeError
+// var sayBye = function() {
+//   console.log("Bye from function expression!");
+// };
 
