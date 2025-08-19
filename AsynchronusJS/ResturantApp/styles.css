@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  margin: 20px;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+form input,
+form select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form button {
+  padding: 8px 16px;
+  background: #27ae60;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  
+}
+form button:hover {
+  background: #219150;
+}
+
+
+ul > li {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+ul ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+
+ul ul li button {
+  background: #c95346;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 30px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+}
+
+ul ul li button:hover {
+  background: #c0392b;
+}
