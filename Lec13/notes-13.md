@@ -26,7 +26,6 @@ $eq--> equal to
 db.<collection-name>.find({PropertyKey:{$eq:"<value>"}})
 
 
-
  db.Products.find({brand:{$eq:"Apple"}}) ------------> will list out all the documents with brand "Apple"
 
  you can easily check all the operators on docummentation or using chatGPT , no need to waste so much time here ; when the usecase comes we will us it
